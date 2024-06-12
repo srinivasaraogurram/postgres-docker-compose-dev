@@ -1,6 +1,6 @@
 version: "3.8"
 services:
-  db:
+  postgresdb:
     image: postgres
     container_name: postgres_db_container
     restart: always
@@ -22,7 +22,10 @@ services:
       PGADMIN_DEFAULT_PASSWORD: sri@pgadmin
     volumes:
       - pgadmin-data:/var/lib/pgadmin
-
+    depends_on:
+      - postgresdb
 volumes:
-  local_pgdata:
+  postgres-data:
   pgadmin-data:
+
+
