@@ -1,31 +1,29 @@
-version: "3.8"
 services:
-  postgresdb:
-    image: postgres
-    container_name: postgres_db_container
+  postgres:
+    image: postgres:latest
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - 5432:5432
+    volumes: 
+      - postgres:/var/lib/postgresql/data
+    
+  adminer:
+    image: adminer
     restart: always
     ports:
-      - "5432:5432"
-    environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: 12345678
-    volumes:
-      - postgres-data:/var/lib/postgresql/data
-  pgadmin:
-    image: dpage/pgadmin4
-    container_name: pgadmin4_container
-    restart: always
-    ports:
-      - "8888:80"
-    environment:
-      PGADMIN_DEFAULT_EMAIL: sri.cloudengineer@gmx.com
-      PGADMIN_DEFAULT_PASSWORD: sri@pgadmin
-    volumes:
-      - pgadmin-data:/var/lib/pgadmin
+      - 8080:8080
     depends_on:
-      - postgresdb
+      - postgres
+    environment:
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+      DB_NAME: postgres
+
 volumes:
-  postgres-data:
-  pgadmin-data:
-
-
+  postgres:
+  
