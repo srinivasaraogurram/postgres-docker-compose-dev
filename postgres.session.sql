@@ -1,3 +1,5 @@
+DROP TABLE IF EXISTS cars
+
 -- creating table cars
 CREATE TABLE cars (
   brand VARCHAR(255),
