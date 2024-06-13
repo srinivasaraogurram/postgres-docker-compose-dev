@@ -75,4 +75,24 @@ ALTER COLUMN
 TYPE
  VARCHAR(4);
 
+-- The DELETE Statement
 
+DELETE FROM cars
+WHERE brand = 'Volvo';
+
+-- Display Table
+SELECT * FROM cars;
+
+-- TRUNCATE TABLE -- > Delete all records in the cars table:
+TRUNCATE TABLE cars;
+
+
+-- Display Table
+SELECT * FROM cars;
+
+-- DROP TABLE Statement - Delete the cars table:
+
+DROP TABLE cars;
+
+-- Display Table
+SELECT * FROM cars;
