@@ -24,3 +24,55 @@ VALUES
 
 -- Display Table
 SELECT * FROM cars;
+
+-- ADD COLUMN
+ALTER TABLE cars
+ADD color VARCHAR(255);
+
+-- Display Table
+SELECT * FROM cars;
+
+-- The UPDATE Statement
+UPDATE cars
+SET color = 'red'
+WHERE brand = 'Volvo';
+
+-- Display Table
+SELECT * FROM cars;
+
+-- The UPDATE Statement -- all rows
+UPDATE cars
+SET color = 'red';
+
+-- Display Table
+SELECT * FROM cars;
+
+-- Update Multiple Columns
+
+UPDATE cars
+SET color = 'white', year = 1970
+WHERE brand = 'Toyota';
+
+-- Display Table
+SELECT * FROM cars;
+
+--  PostgreSQL ALTER COLUMN
+-- ALTER COLUMN
+ALTER TABLE cars
+ALTER COLUMN year TYPE VARCHAR(4);
+
+-- Change Maximum Allowed Characters
+ALTER TABLE cars
+ALTER COLUMN color TYPE VARCHAR(30);
+
+--Write the correct SQL statement to change the data type of the year field from INT to VARCHAR(4).
+
+
+ALTER TABLE
+ cars
+ALTER COLUMN
+ year 
+TYPE
+ VARCHAR(4);
+
+
