@@ -99,3 +99,6 @@ SELECT * FROM cars;
 
 -- Display Table
 SELECT * FROM cars;
+
+SELECT * FROM cars
+WHERE brand != 'Volvo';
