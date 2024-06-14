@@ -27,9 +27,9 @@ VALUES
 -- Display Table
 SELECT * FROM cars;
 
--- ADD COLUMN
--- ALTER TABLE cars
--- ADD color VARCHAR(255);
+--ADD COLUMN
+ALTER TABLE cars
+ADD color VARCHAR(255);
 
 -- Display Table
 SELECT * FROM cars;
