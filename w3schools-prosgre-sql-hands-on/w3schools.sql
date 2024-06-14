@@ -75,8 +75,9 @@ ALTER TABLE
 ALTER COLUMN
  year 
 TYPE
- VARCHAR(4);
+ INT;
 
+delete from cars;
 -- The DELETE Statement
 
 -- DELETE FROM cars
