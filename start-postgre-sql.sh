@@ -1,0 +1,1 @@
+docker-compose -f docker-compose-postgres-pgadmin4-adminer/docker-compose.yml up -d

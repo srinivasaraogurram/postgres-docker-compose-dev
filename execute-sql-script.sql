@@ -1,0 +1,1 @@
+psql -h localhost -U postgres -d postgres -f w3schools.sql 
