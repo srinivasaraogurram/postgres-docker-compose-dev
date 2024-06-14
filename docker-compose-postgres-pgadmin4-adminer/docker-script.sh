@@ -1,3 +1,3 @@
-docker run -v postgres:/data/postgres --name postgres_container -p 5432:5432 -e POSTGRES_USER=${POSTGRES_USER:-postgres} -e POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-postgres} -e POSTGRES_DB=postgres -e PGDATA=/data/postgres postgres 
+docker run -v postgres:./data/postgres --name postgres_container -p 5432:5432 -e POSTGRES_USER=${POSTGRES_USER:-postgres} -e POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-postgres} -e POSTGRES_DB=postgres -e PGDATA=/data/postgres postgres 
 docker run -p 8080:8080 -e DB_HOST=postgres -e DB_PORT=5432 -e DB_USER=postgres -e DB_PASSWORD=postgres -e DB_NAME=postgres adminer 
 docker run -v pgadmin:/var/lib/pgadmin --name pgadmin_container -p ${PGADMIN_PORT:-3000}:80 -e PGADMIN_DEFAULT_EMAIL=${PGADMIN_DEFAULT_EMAIL:-pgadmin4@pgadmin.org} -e PGADMIN_DEFAULT_PASSWORD=${PGADMIN_DEFAULT_PASSWORD:-admin} -e PGADMIN_CONFIG_SERVER_MODE=False dpage/pgadmin4 
