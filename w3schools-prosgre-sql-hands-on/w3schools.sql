@@ -28,8 +28,8 @@ VALUES
 SELECT * FROM cars;
 
 -- ADD COLUMN
-ALTER TABLE cars
-ADD color VARCHAR(255);
+-- ALTER TABLE cars
+-- ADD color VARCHAR(255);
 
 -- Display Table
 SELECT * FROM cars;
@@ -60,24 +60,24 @@ SELECT * FROM cars;
 
 --  PostgreSQL ALTER COLUMN
 -- ALTER COLUMN
-ALTER TABLE cars
-ALTER COLUMN year TYPE VARCHAR(4);
+-- ALTER TABLE cars
+-- ALTER COLUMN year TYPE VARCHAR(4);
 
 -- Change Maximum Allowed Characters
-ALTER TABLE cars
-ALTER COLUMN color TYPE VARCHAR(30);
+-- ALTER TABLE cars
+-- ALTER COLUMN color TYPE VARCHAR(30);
 
 --Write the correct SQL statement to change the data type of the year field from INT to VARCHAR(4).
 
 
-ALTER TABLE
- cars
+/* ALTER TABLE cars
 ALTER COLUMN
  year 
 TYPE
  INT;
+ */
 
-delete from cars;
+-- delete from cars;
 -- The DELETE Statement
 
 -- DELETE FROM cars
