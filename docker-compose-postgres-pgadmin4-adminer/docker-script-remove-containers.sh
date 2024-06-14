@@ -1,1 +1,1 @@
-docker rm -v -f $(docker ps -qa)
+docker container prune
