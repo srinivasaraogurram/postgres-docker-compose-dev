@@ -10,7 +10,7 @@ CREATE TABLE cars (
 -- Display Table
 SELECT * FROM cars;
 
--- inseting single row from cars; - 
+-- inserting single row from cars; - 
 INSERT INTO cars (brand, model, year)
 VALUES ('Ford', 'Mustang', 1964);
 
@@ -43,8 +43,8 @@ WHERE brand = 'Volvo';
 SELECT * FROM cars;
 
 -- The UPDATE Statement -- all rows
-UPDATE cars
-SET color = 'red';
+-- UPDATE cars
+-- SET color = 'red';
 
 -- Display Table
 SELECT * FROM cars;
@@ -79,14 +79,14 @@ TYPE
 
 -- The DELETE Statement
 
-DELETE FROM cars
-WHERE brand = 'Volvo';
+-- DELETE FROM cars
+-- WHERE brand = 'Volvo';
 
 -- Display Table
 SELECT * FROM cars;
 
 -- TRUNCATE TABLE -- > Delete all records in the cars table:
-TRUNCATE TABLE cars;
+-- TRUNCATE TABLE cars;
 
 
 -- Display Table
@@ -94,7 +94,7 @@ SELECT * FROM cars;
 
 -- DROP TABLE Statement - Delete the cars table:
 
-DROP TABLE cars;
+-- DROP TABLE cars;
 
 -- Display Table
 SELECT * FROM cars;
