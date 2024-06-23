@@ -5,13 +5,15 @@ services:
     environment:
       POSTGRES_USER: ${POSTGRES_USER:-postgres}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-postgres}
-      PGDATA: /data/postgres
+      POSTGRES_DB: postgres
+      #PGDATA: /data/postgres
     volumes:
-       - postgres:/data/postgres
+       - ../postgres/data:/var/lib/postgresql/data
+       - ./db.sql:/docker-entrypoint-initdb.d/db.sql
     ports:
       - 5432:5432
     restart: unless-stopped
-  
+
   pgadmin:
     container_name: pgadmin_container
     image: dpage/pgadmin4
@@ -29,5 +31,5 @@ services:
 
 
 volumes:
-    postgres:
+    #postgres:
     pgadmin:
